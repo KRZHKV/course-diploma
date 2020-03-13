@@ -1,9 +1,10 @@
 'use strict';
 
 import chooseClub from './modules/chooseClub';
-import freeVisit from './modules/freeVisit';
-import callBackMe from './modules/callBackMe';
-chooseClub();
-freeVisit();
-callBackMe();
+import popup from './modules/popup';
+import gift from './modules/gift';
 
+
+chooseClub();
+popup();
+gift();

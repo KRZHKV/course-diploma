@@ -1,4 +1,4 @@
-const chooseClub = function () {
+const chooseClub = () => {
     const clubSelect = document.querySelector('.club-select'),
           clubSelectUl = clubSelect.querySelector('ul'),
           clubSelectBtn = clubSelect.querySelector('p');

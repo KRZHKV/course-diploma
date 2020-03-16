@@ -1,5 +1,6 @@
 const gift = () => {
     const giftBtn = document.querySelector('.fixed-gift');
+    if (giftBtn) {
     const giftpopup = document.getElementById('gift');
 
     giftBtn.addEventListener('click', () => {  
@@ -13,6 +14,7 @@ const gift = () => {
             giftpopup.style.display = 'none';
         };
     });
+    };
 };
 
 export default gift;

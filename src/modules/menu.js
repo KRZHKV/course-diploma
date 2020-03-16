@@ -21,13 +21,11 @@ const menu = () => {
 	});
 	
 	window.addEventListener('scroll', () => {
-		if (document.body.clientWidth < 768) {
 			if(pageYOffset > headerHeight) {
 				nav.style.position = 'fixed';
 			} else {
 				nav.style.position = '';
 			};
-		};
 	});
 };
 

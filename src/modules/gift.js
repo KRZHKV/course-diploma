@@ -10,7 +10,7 @@ const gift = () => {
 
     giftpopup.addEventListener('click', (event) => {
         let target = event.target;
-        if (target.classList.contains('close_icon') || target.classList.contains('overlay')) {
+        if (target.classList.contains('close_icon') || target.classList.contains('overlay') || target.classList.contains('close-btn')) {
             giftpopup.style.display = 'none';
         };
     });

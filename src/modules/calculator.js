@@ -16,33 +16,66 @@ const calculator = () => {
     
     form.addEventListener('change', () => {
             if (oneMonth.checked && mozaikaBtn.checked) {
-                priceInput.textContent = '1999';
+                if (promo.value === 'ТЕЛО2019'){
+                    let price = 1999;
+                    priceInput.textContent = `${Math.round(+price * 0.7)}`;
+                } else {
+                    priceInput.textContent = '1999';
+                }
             } else if (sixMonth.checked && mozaikaBtn.checked) {
-                priceInput.textContent = '9990';
+                if (promo.value === 'ТЕЛО2019'){
+                    let price = 9999;
+                    priceInput.textContent = `${Math.round(+price * 0.7)}`;
+                } else {
+                    priceInput.textContent = '9990';
+                }
             } else if (nineMonth.checked && mozaikaBtn.checked) {
-                priceInput.textContent = '13990';
+                if (promo.value === 'ТЕЛО2019'){
+                    let price = 13990;
+                    priceInput.textContent = `${Math.round(+price * 0.7)}`;
+                } else {
+                    priceInput.textContent = '13990';
+                }
             } else if (twelveMonth.checked && mozaikaBtn.checked) {
-                priceInput.textContent = '19990';
+                if (promo.value === 'ТЕЛО2019'){
+                    let price = 19990;
+                    priceInput.textContent = `${Math.round(+price * 0.7)}`;
+                } else {
+                    priceInput.textContent = '19990';
+                }
             } else if (oneMonth.checked && schelkovoBtn.checked) {
-                priceInput.textContent = '2990';
+                if (promo.value === 'ТЕЛО2019'){
+                    let price = 2990;
+                    priceInput.textContent = `${Math.round(+price * 0.7)}`;
+                } else {
+                    priceInput.textContent = '2990';
+                }
             } else if (sixMonth.checked && schelkovoBtn.checked) {
-                priceInput.textContent = '14990';
+                if (promo.value === 'ТЕЛО2019'){
+                    let price = 14990;
+                    priceInput.textContent = `${Math.round(+price * 0.7)}`;
+                } else {
+                    priceInput.textContent = '14990';
+                }
             } else if (nineMonth.checked && schelkovoBtn.checked) {
-                priceInput.textContent = '21990';
+                if (promo.value === 'ТЕЛО2019'){
+                    let price = 21990;
+                    priceInput.textContent = `${Math.round(+price * 0.7)}`;
+                } else {
+                    priceInput.textContent = '21990';
+                }
             } else if (twelveMonth.checked && schelkovoBtn.checked) {
-                priceInput.textContent = '24990';
+                if (promo.value === 'ТЕЛО2019'){
+                    let price = 24990;
+                    priceInput.textContent = `${Math.round(+price * 0.7)}`;
+                } else {
+                    priceInput.textContent = '24990';
+                }
             };
 
     });
 
-    promo.addEventListener('keyup', () => {
-        console.log(promo.value)
-        if (promo.value === 'ТЕЛО2019'){
 
-            let price = priceInput.textContent;
-            priceInput.textContent = `${Math.round(+price * 0.7)}`;
-        }
-    });
 
 };
 

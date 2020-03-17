@@ -11,6 +11,7 @@ import photoSlider from './modules/photoSlider';
 import checkForm from './modules/checkForm';
 import mainForm from './modules/mainForm';
 import popupForm from './modules/popupForm';
+import footerForm from './modules/footerForm';
 
 
 
@@ -25,3 +26,4 @@ photoSlider();
 checkForm();
 mainForm();
 popupForm();
+footerForm();

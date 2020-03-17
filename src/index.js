@@ -10,6 +10,8 @@ import mainSlider from './modules/mainSlider';
 import photoSlider from './modules/photoSlider';
 import checkForm from './modules/checkForm';
 import mainForm from './modules/mainForm';
+import popupForm from './modules/popupForm';
+
 
 
 chooseClub();
@@ -22,3 +24,4 @@ mainSlider();
 photoSlider();
 checkForm();
 mainForm();
+popupForm();

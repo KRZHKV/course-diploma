@@ -3,9 +3,11 @@ const mainForm = () => {
     const form = document.getElementById('banner-form');
     const thanksWindow = document.getElementById('thanks');
     const statusMessage = document.createElement('div');
+    const checkbox = form.querySelector('input[type=checkbox]');
 
     const clearInput = () => {
         statusMessage.textContent = '';
+        checkbox.checked = false;
     }
 
 

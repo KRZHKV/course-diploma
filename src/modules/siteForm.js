@@ -1,11 +1,13 @@
 const siteForm = () => {
     const form = document.getElementById('card_order');
     const statusMessage = document.createElement('div');
+    const thanksWindow = document.getElementById('thanks');
+    const cardCheck = document.getElementById('card_check');
  
 
     const clearInput = () => {
         statusMessage.textContent = '';
-        checkbox.checked = false;
+        cardCheck.checked = false;
     }
 
     form.addEventListener('submit', (event) => {

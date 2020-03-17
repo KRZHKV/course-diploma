@@ -3,6 +3,9 @@ const footerForm = () => {
     const thanksWindow = document.getElementById('thanks');
     const statusMessage = document.createElement('div');
 
+    let formValues2 = form.querySelectorAll('input');
+    console.log(formValues2);
+
     const clearInput = () => {
         statusMessage.textContent = '';
     }
@@ -12,6 +15,7 @@ const footerForm = () => {
         const formData = new FormData(form);
         let body = {};
         let formValues = form.querySelectorAll('input');
+
         statusMessage.textContent = 'Загрузка';
         form.appendChild(statusMessage);
 

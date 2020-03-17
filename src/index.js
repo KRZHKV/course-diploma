@@ -8,7 +8,8 @@ import menu from './modules/menu';
 import calculator from './modules/calculator';
 import mainSlider from './modules/mainSlider';
 import photoSlider from './modules/photoSlider';
-import sendForm from './modules/sendForm';
+import checkForm from './modules/checkForm';
+import mainForm from './modules/mainForm';
 
 
 chooseClub();
@@ -19,4 +20,5 @@ menu();
 calculator();
 mainSlider();
 photoSlider();
-sendForm();
+checkForm();
+mainForm();

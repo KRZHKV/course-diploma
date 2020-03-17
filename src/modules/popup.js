@@ -3,6 +3,7 @@ const popup = () => {
     const callbackPopup = document.getElementById('callback_form');
     const freeVisitBtn = document.querySelector('.free-visit');
     const freeVisitPopup = document.getElementById('free_visit_form');
+    const thanksWindow = document.getElementById('thanks');
 
     const showPopup = (button, popup) => {
         button.addEventListener('click', () => {
@@ -13,7 +14,7 @@ const popup = () => {
     const closePopup = (popup) => {
         popup.addEventListener('click', (event) => {
             let target = event.target;
-            if ( target.classList.contains('overlay') || target.classList.contains('close_icon') ) {
+            if ( target.classList.contains('overlay') || target.classList.contains('close_icon') || target.classList.contains('close-btn') ) {
                 popup.style.display = 'none';
             };
         });
@@ -23,6 +24,7 @@ const popup = () => {
     showPopup(freeVisitBtn, freeVisitPopup);
     closePopup(callbackPopup);
     closePopup(freeVisitPopup);
+    closePopup(thanksWindow);
 };
 
 

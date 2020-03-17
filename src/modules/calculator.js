@@ -35,10 +35,12 @@ const calculator = () => {
 
     });
 
-    promo.addEventListener('input', () => {
+    promo.addEventListener('keyup', () => {
+        console.log(promo.value)
         if (promo.value === 'ТЕЛО2019'){
+
             let price = priceInput.textContent;
-            priceInput.textContent = `${+price * 0.7}`;
+            priceInput.textContent = `${Math.round(+price * 0.7)}`;
         }
     });
 

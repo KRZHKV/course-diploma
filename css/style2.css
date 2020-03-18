@@ -41,3 +41,27 @@
 .dot-active {
     background-color: #ffd11a;
 }
+#services .wrapper {
+    position: relative;
+}
+#arrowLeftService {
+    left: 5%;
+}
+#arrowRightService {
+    right: 5%;
+}
+.services-slider-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
+}
+.services-slider {
+    margin: 0;
+  padding: 0;
+    width: 3000px;
+    transition: margin-left 250ms;
+}
+
+.services-slider .slide {
+    display: inline-block;
+}

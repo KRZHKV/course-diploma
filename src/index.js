@@ -13,6 +13,7 @@ import popupForm from './modules/popupForm';
 import footerForm from './modules/footerForm';
 import siteForm from './modules/siteForm';
 import photoSlider from './modules/photoSlider';
+import serviceSlider from './modules/serviceSlider';
 
 
 
@@ -29,4 +30,5 @@ popupForm();
 footerForm();
 siteForm();
 photoSlider();
+serviceSlider();
 

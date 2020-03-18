@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style2.css">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
@@ -348,7 +349,7 @@
     <div class="gallery-bg">
         <div class="wrapper">
             <div class="gallery-slider">
-                <div class="slide">
+                <div class="slide slide-active">
                     <img src="images/gallery/photo1.jpg" alt="">
                 </div>
                 <div class="slide">
@@ -364,6 +365,10 @@
                     <img src="images/gallery/photo5.jpg" alt="">
                 </div>
             </div>
+            <button id="arrowLeft" class="arrow-btn prev"><i class="fa fa-arrow-up fa-rotate-270"></i></button>
+            <button id="arrowRight" class="arrow-btn next"><i class="fa fa-arrow-up fa-rotate-90"></i></button>
+            <ul class="dots-wrapper">
+             </ul>
         </div>
     </div>
 </section>

@@ -13,8 +13,8 @@ const calculator = () => {
           agreementBtn = document.getElementById('card_check'),
           submitBtn = document.querySelectorAll('card-order-btn');
 
-    
-    form.addEventListener('change', () => {
+    if (promo) {
+        form.addEventListener('change', () => {
             if (oneMonth.checked && mozaikaBtn.checked) {
                 if (promo.value === 'ТЕЛО2019'){
                     let price = 1999;
@@ -74,6 +74,10 @@ const calculator = () => {
             };
 
     });
+    }
+
+    
+    
 
 
 };

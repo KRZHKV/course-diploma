@@ -10,6 +10,7 @@ const footerForm = () => {
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         const formData = new FormData(form);
+        formData.get('club-name');
         let body = {};
         let formValues = form.querySelectorAll('input');
 

@@ -51,15 +51,16 @@
     right: 5%;
 }
 .special-wrapper {
-    max-width: 1100px;
     overflow: hidden;
 }
-.service-slider {
+.services-slider {
     left: 0;
     position: relative;
     transition: all ease 1s;
-    background-color: green;
-    width: 400px;
+    width: 4000px;
+}
+.services-slider .slide {
+    display: inline-block;
 }
 .fixed-gift {
     margin-top: 50px;

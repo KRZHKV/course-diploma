@@ -3,9 +3,6 @@ const footerForm = () => {
     const thanksWindow = document.getElementById('thanks');
     const statusMessage = document.createElement('div');
 
-    let formValues2 = form.querySelectorAll('input');
-    console.log(formValues2);
-
     const clearInput = () => {
         statusMessage.textContent = '';
     }

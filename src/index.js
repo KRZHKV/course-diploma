@@ -28,5 +28,5 @@ mainForm();
 popupForm();
 footerForm();
 siteForm();
-// photoSlider()
+photoSlider();
 

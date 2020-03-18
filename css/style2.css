@@ -1,0 +1,43 @@
+.gallery-slider .slide {
+    display: none;
+}
+.gallery-slider .slide-active {
+    display: block !important;
+}
+.gallery-bg .wrapper {
+    position: relative;
+}
+.arrow-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    top: 50%;
+    background-color: #ffd11a;
+    color: #000000;
+    transform: translateY(-50%);
+}
+#arrowLeft {
+    left: 10%;
+}
+#arrowRight {
+    right: 10%;
+}
+.dots-wrapper {
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.dot {
+    margin: 5px;
+    width: 25px;
+    height: 5px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.dot-active {
+    background-color: #ffd11a;
+}

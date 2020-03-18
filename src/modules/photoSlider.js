@@ -1,51 +1,44 @@
 const photoSlider = () => {
     const slider = document.querySelector('.gallery-slider'),
-          slide = slider.querySelectorAll('.slide');
-
-    const prevArrow = document.querySelector('.prev'),
-          nextArrow = document.querySelector('.next'),
-          dotsWrapper = slider.querySelector('.dots-wrapper');
-
-
-    slider.style.position = 'relative';
-    prevArrow.style.cssText = 'width: 40px; height: 40px; background-color: #ffd11a; position: absolute; top: 45%; left: 0; border-radius: 50%; border: none; font-size: 20px;';
-    nextArrow.style.cssText = 'width: 40px; height: 40px; background-color: #ffd11a; position: absolute; top: 45%; right: 0; border-radius: 50%; border: none; font-size: 20px;';
-
+          sliderWrapper = slider.parentNode,
+          slide = slider.querySelectorAll('.slide'),
+          dotWrapper = sliderWrapper.querySelector('.dots-wrapper');
 
     let currentSlide = 0,
         interval;
+
+    const slideDots = () => {
+        slide.forEach((elem, index) => {
+            elem[index] = document.createElement('li');
+            elem[index].classList.add('dot');
+            if (elem[index] === elem[0]) {
+                elem[0].classList.add('dot-active');
+            }
+            dotWrapper.appendChild(elem[index]);
+        });
+    };
+        slideDots();
     
-    slide.forEach((elem) => {
-        elem.style.display = 'none';
-        if (elem.classList.contains('slide-active')) {
-            elem.style.display = 'block';
-        }
-    });
-
-
+    let dot = document.querySelectorAll('.dot');
 
 
     const prevSlide = (element, index, classSlide) => {
         element[index].classList.remove(classSlide);
-        if (element[index].classList.contains('slide')) {
-            element[index].style.display = 'none';
-        }
     };
+
 
     const nextSlide = (element, index, classSlide) => {
         element[index].classList.add(classSlide);
-        if (element[index].classList.contains('slide-active')) {
-            element[index].style.display = 'block';
-        } 
     };
 
-
     const autoPlayer = () => {
+        prevSlide(dot, currentSlide, 'dot-active');
         prevSlide(slide, currentSlide, 'slide-active');
         currentSlide++;
         if (currentSlide >= slide.length) {
             currentSlide = 0;
         }
+        nextSlide(dot, currentSlide, 'dot-active');
         nextSlide(slide, currentSlide, 'slide-active');
     }
 
@@ -55,20 +48,59 @@ const photoSlider = () => {
 
     const stopSlider = () => {
         clearInterval(interval);
-    }
+    };
 
-    slider.addEventListener('click', (event) => {
+    sliderWrapper.addEventListener('click', (event) => {
+        event.preventDefault();
+
         let target = event.target;
         console.log(target);
-        if (target.classList.contains('prev')) {
-            prevSlide(slide, currentSlide, 'slide-active');
-        }
-    })
 
+        if (!target.matches('.arrow-btn, .dot')) {
+            return;
+        };
 
+        prevSlide(slide, currentSlide, 'slide-active');
+        prevSlide(dot, currentSlide, 'dot-active');
+
+        if (target.closest('#arrowRight')) {
+            currentSlide++;
+        } else if (target.closest('#arrowLeft')) {
+            currentSlide--;
+        } else if (target.matches('.dot')) {
+            dot.forEach((elem, index) => {
+                if (elem === target) {
+                    currentSlide = index;
+                };
+            });
+        };
+        if (currentSlide >= slide.length) {
+            currentSlide = 0;
+        };
+        if (currentSlide < 0) {
+            currentSlide = slide.length - 1;
+        };
+        nextSlide(slide, currentSlide, 'slide-active');
+        nextSlide(dot, currentSlide, 'dot-active');
+    });
+
+    sliderWrapper.addEventListener('mouseover', (event) => {
+        if (event.target.matches('.arrow-btn') || event.target.matches('.dot')) {
+            stopSlider();
+        };
+    });
+
+    sliderWrapper.addEventListener('mouseout', (event) => {
+        if (event.target.matches('.arrow-btn') || event.target.matches('.dot')) {
+            startSlider();
+        };
+    });
+
+    
     startSlider();
+    
 
 
-};
+} 
 
 export default photoSlider;

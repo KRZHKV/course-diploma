@@ -4,8 +4,6 @@ const popupForm = () => {
     const form2 = document.getElementById('form1');
     const forms = [form1, form2];
 
-    let formValues3 = form1.querySelectorAll('input');
-    console.log(formValues3);
 
     forms.forEach((elem) => {
 

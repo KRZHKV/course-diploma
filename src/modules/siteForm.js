@@ -3,19 +3,18 @@ const siteForm = () => {
     const statusMessage = document.createElement('div');
     const thanksWindow = document.getElementById('thanks');
     
- 
-
     const clearInput = () => {
         statusMessage.textContent = '';
         let cardCheck = document.querySelector('input[type=radio]');
         if (cardCheck) {
             cardCheck.checked = false;
-        }
-    }
+        };
+    };
 
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         const formData = new FormData(form);
+    
         formData.get('card-type', 'form_name');
         let body = {};
         let formValues = form.querySelectorAll('input');
@@ -25,6 +24,7 @@ const siteForm = () => {
         formData.forEach((value, key) => {
             body[key] = value;
         });
+
         postData(body)
         .then((response) => {
             if(response.status !== 200) {
@@ -44,21 +44,18 @@ const siteForm = () => {
 
             
         });     
-
-});
-
-const postData = (body) => {
-    return fetch('./server.php', {
-        method: 'POST',
-        headers: {
-            'Content-type': 'application/json'
-        },
-        body: JSON.stringify(body)
     });
-    
+
+    const postData = (body) => {
+        return fetch('./server.php', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
+    };
 
 };
-
-}
 
 export default siteForm;

@@ -31,11 +31,11 @@ const mainSlider = () => {
             currentSlide = 0;
         }
         nextSlide(slide, currentSlide, 'slide-active');
-    }
+    };
 
     const startSlider = ( time = 3000 ) => {
         interval = setInterval(autoPlayer, time);
-    }
+    };
 
     
     startSlider();

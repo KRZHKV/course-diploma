@@ -1,11 +1,7 @@
 const checkForm = () => {
-    const forms = document.querySelectorAll('form');
-
-    let statusMessage = document.createElement('div');
     
     const inputName = document.querySelectorAll('input[type=text]'),
-          inputPhone = document.querySelectorAll('input[type=tel]'),
-          inputMessage = document.querySelectorAll('input[type=mess]');
+          inputPhone = document.querySelectorAll('input[type=tel]');
 
     inputName.forEach((e) => {
         e.addEventListener('input', () => {
@@ -24,11 +20,6 @@ const checkForm = () => {
         });
     });
 
-
-
-
-
-
-}
+};
 
 export default checkForm;

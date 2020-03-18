@@ -40,11 +40,11 @@ const photoSlider = () => {
         }
         nextSlide(dot, currentSlide, 'dot-active');
         nextSlide(slide, currentSlide, 'slide-active');
-    }
+    };
 
     const startSlider = ( time = 3000 ) => {
         interval = setInterval(autoPlayer, time);
-    }
+    };
 
     const stopSlider = () => {
         clearInterval(interval);

@@ -50,18 +50,14 @@
 #arrowRightService {
     right: 5%;
 }
-.services-slider-wrapper {
-    margin: 0 auto;
-    width: 100%;
+.special-wrapper {
+    max-width: 1100px;
     overflow: hidden;
 }
-.services-slider {
-    margin: 0;
-  padding: 0;
-    width: 3000px;
-    transition: margin-left 250ms;
-}
-
-.services-slider .slide {
-    display: inline-block;
+.service-slider {
+    left: 0;
+    position: relative;
+    transition: all ease 1s;
+    background-color: green;
+    width: 400px;
 }

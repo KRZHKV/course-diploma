@@ -3,36 +3,19 @@ const serviceSlider = () => {
           sliderWrapper = slider.parentNode,
           slide = slider.querySelectorAll('.slide');
 
-
-               
-    const arrowRight = document.getElementById('arrowRightService'),
-          arrowLeft =  document.getElementById('arrowLeftService');
-
-
-    let count = 1,
-        itemWidth = slide[0].clientWidth,
-        currentSlide = 6;
-        console.log(itemWidth)
-
-    sliderWrapper.style.width = `${((itemWidth +12) * 5)}px`;
-
+    let position = 0;
     
+        
+
+    const arrowLeft = document.getElementById('arrowLeftService');
+
     arrowLeft.addEventListener('click', () => {
-        currentSlide += itemWidth;
-        slider.style.marginLeft = (currentSlide + 6) + 'px';
+        position = position - 200;
+        if ( position < -1100)
+        slider.style.left = position + 'px';
     });
-
-    arrowRight.addEventListener('click', () => {
-        currentSlide -= itemWidth;
-        slider.style.marginLeft = (currentSlide - 8) + 'px';
-    });
-
-
-
-
-
-
 
 }
+
 
 export default serviceSlider;

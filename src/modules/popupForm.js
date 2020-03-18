@@ -12,13 +12,14 @@ const popupForm = () => {
             popup.style.display = 'none';
         }
         const clearInput = () => {
-            statusMessage.textContent = '';
+            statusMessage.textContent = oldMessage;
             const checkbox = elem.querySelector('input[type=checkbox]')
             checkbox.checked = false;
             popupClose();
         }
 
         let statusMessage = elem.querySelector('h4');
+        const oldMessage = statusMessage.textContent;
 
         elem.addEventListener('submit', (event) => {
             event.preventDefault();

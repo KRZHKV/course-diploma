@@ -8,12 +8,9 @@ import menu from './modules/menu';
 import calculator from './modules/calculator';
 import mainSlider from './modules/mainSlider';
 import checkForm from './modules/checkForm';
-import mainForm from './modules/mainForm';
-import popupForm from './modules/popupForm';
-import footerForm from './modules/footerForm';
-import siteForm from './modules/siteForm';
 import photoSlider from './modules/photoSlider';
 import serviceSlider from './modules/serviceSlider';
+import sendForm from './modules/sendForm';
 
 
 
@@ -25,10 +22,7 @@ menu();
 calculator();
 mainSlider();;
 checkForm();
-mainForm();
-popupForm();
-footerForm();
-siteForm();
 photoSlider();
 serviceSlider();
+sendForm();
 

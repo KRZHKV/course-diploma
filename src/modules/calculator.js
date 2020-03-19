@@ -7,13 +7,8 @@ const calculator = () => {
           mozaikaBtn = document.getElementById('card_leto_mozaika'),
           schelkovoBtn = document.getElementById('card_leto_schelkovo'),
           priceInput = document.getElementById('price-total'),
-          promo = form.querySelectorAll('input[name="name"]')[0],
-          name = form.querySelectorAll('input[name="name"]')[1],
-          phone = document.getElementById('callback_form-phone'),
-          agreementBtn = document.getElementById('card_check'),
-          submitBtn = document.querySelectorAll('card-order-btn');
+          promo = form.querySelectorAll('input[name="name"]')[0];
 
-    if (promo) {
         form.addEventListener('change', () => {
             if (oneMonth.checked && mozaikaBtn.checked) {
                 if (promo.value === 'ТЕЛО2019'){
@@ -72,9 +67,8 @@ const calculator = () => {
                     priceInput.textContent = '24990';
                 }
             };
-
     });
-    }
+    
 
     
     

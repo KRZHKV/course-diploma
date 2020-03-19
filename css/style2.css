@@ -18,6 +18,9 @@
     color: #000000;
     transform: translateY(-50%);
 }
+.arrow-btn:hover {
+    cursor: pointer;
+}
 #arrowLeft {
     left: 10%;
 }
@@ -37,6 +40,11 @@
     height: 5px;
     background-color: #ffffff;
     border-radius: 10px;
+
+}
+.dot:hover {
+    background-color: #ffd11a;
+    cursor: pointer;
 }
 .dot-active {
     background-color: #ffd11a;

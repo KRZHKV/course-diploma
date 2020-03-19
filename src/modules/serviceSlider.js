@@ -17,7 +17,6 @@ const serviceSlider = () => {
 
     arrowRight.addEventListener('click', () => {
         position = position - (slideWidth + 10);
-        console.log(position);
         if (position < -1100) {
             position = 0;
             slider.style.transform = `translateX(${position}px)`;
@@ -27,7 +26,6 @@ const serviceSlider = () => {
     });
     arrowLeft.addEventListener('click', () => {
         position = position + (slideWidth + 10);
-        console.log(position);
         if (position > 0) {
             position = -1100;
             slider.style.transform = `translateX(${position}px)`;

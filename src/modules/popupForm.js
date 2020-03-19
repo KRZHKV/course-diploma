@@ -25,6 +25,7 @@ const popupForm = () => {
             event.preventDefault();
             statusMessage.textContent = 'Загрузка';
             const formData = new FormData(elem);
+            formData.get('form_name');
             let body = {};
             let formValues = elem.querySelectorAll('input');
 

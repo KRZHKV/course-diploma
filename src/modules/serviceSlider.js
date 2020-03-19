@@ -11,7 +11,6 @@ const serviceSlider = () => {
     sliderWrapper.style.width = slideWidth*5;
     
         
-
     const arrowLeft = document.getElementById('arrowLeftService');
     const arrowRight = document.getElementById('arrowRightService');
 
@@ -34,7 +33,6 @@ const serviceSlider = () => {
         }
     });
 
-}
-
+};
 
 export default serviceSlider;

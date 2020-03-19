@@ -8,6 +8,8 @@ const calculator = () => {
           schelkovoBtn = document.getElementById('card_leto_schelkovo'),
           priceInput = document.getElementById('price-total'),
           promo = form.querySelectorAll('input[name="name"]')[0];
+    
+    if (oneMonth) {
 
     let price;
 
@@ -36,7 +38,7 @@ const calculator = () => {
             priceInput.textContent = price;
         };
     });
-
+    };
 };
 
 export default calculator;
